@@ -48,26 +48,16 @@ const Tabs = () => {
         options={{
           tabBarIcon: ({ focused }) => (
             <CustomTabIcon focused={focused} icon={icons.home} />
-            // <View style={{ alignItems: "center" }}>
-            //   <Image
-            //     source={icons.home}
-            //     resizeMode="contain"
-            //     style={{
-            //       width: 20,
-            //       height: 20,
-            //       tintColor: focused ? COLORS.primary : COLORS.lightPrimary,
-            //     }}
-            //   />
-            //   <View
-            //     style={{
-            //       width: 5,
-            //       height: 5,
-            //       borderRadius: 5,
-            //       backgroundColor: focused ? COLORS.primary : "transparent",
-            //       marginTop: 3,
-            //     }}
-            //   />
-            // </View>
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Saved"
+        component={Home}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <CustomTabIcon focused={focused} icon={icons.bookmark} />
           ),
         }}
       />
@@ -78,16 +68,6 @@ const Tabs = () => {
         options={{
           tabBarIcon: ({ focused }) => (
             <CustomTabIcon focused={focused} icon={icons.notification} />
-          ),
-        }}
-      />
-
-      <Tab.Screen
-        name="Profile"
-        component={Home}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <CustomTabIcon focused={focused} icon={icons.user} />
           ),
         }}
       />
