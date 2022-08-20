@@ -5,6 +5,29 @@ import { COLORS, icons } from "../constants";
 
 import { Home } from "../screens";
 
+const CustomTabIcon = ({ focused, icon }) => (
+  <View style={{ alignItems: "center" }}>
+    <Image
+      source={icon}
+      resizeMode="contain"
+      style={{
+        width: 20,
+        height: 20,
+        tintColor: focused ? COLORS.primary : COLORS.lightPrimary,
+      }}
+    />
+    <View
+      style={{
+        width: 5,
+        height: 5,
+        borderRadius: 5,
+        backgroundColor: focused ? COLORS.primary : "transparent",
+        marginTop: 3,
+      }}
+    />
+  </View>
+);
+
 const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
@@ -24,26 +47,27 @@ const Tabs = () => {
         component={Home}
         options={{
           tabBarIcon: ({ focused }) => (
-            <View style={{ alignItems: "center" }}>
-              <Image
-                source={icons.home}
-                resizeMode="contain"
-                style={{
-                  width: 20,
-                  height: 20,
-                  tintColor: focused ? COLORS.primary : COLORS.lightPrimary,
-                }}
-              />
-              <View
-                style={{
-                  width: 5,
-                  height: 5,
-                  borderRadius: 5,
-                  backgroundColor: focused ? COLORS.primary : "transparent",
-                  marginTop: 3,
-                }}
-              />
-            </View>
+            <CustomTabIcon focused={focused} icon={icons.home} />
+            // <View style={{ alignItems: "center" }}>
+            //   <Image
+            //     source={icons.home}
+            //     resizeMode="contain"
+            //     style={{
+            //       width: 20,
+            //       height: 20,
+            //       tintColor: focused ? COLORS.primary : COLORS.lightPrimary,
+            //     }}
+            //   />
+            //   <View
+            //     style={{
+            //       width: 5,
+            //       height: 5,
+            //       borderRadius: 5,
+            //       backgroundColor: focused ? COLORS.primary : "transparent",
+            //       marginTop: 3,
+            //     }}
+            //   />
+            // </View>
           ),
         }}
       />
@@ -53,15 +77,7 @@ const Tabs = () => {
         component={Home}
         options={{
           tabBarIcon: ({ focused }) => (
-            <Image
-              source={icons.notification}
-              resizeMode="contain"
-              style={{
-                width: 20,
-                height: 20,
-                tintColor: focused ? COLORS.primary : "#000",
-              }}
-            />
+            <CustomTabIcon focused={focused} icon={icons.notification} />
           ),
         }}
       />
@@ -71,15 +87,7 @@ const Tabs = () => {
         component={Home}
         options={{
           tabBarIcon: ({ focused }) => (
-            <Image
-              source={icons.user}
-              resizeMode="contain"
-              style={{
-                width: 20,
-                height: 20,
-                tintColor: focused ? COLORS.primary : "#000",
-              }}
-            />
+            <CustomTabIcon focused={focused} icon={icons.user} />
           ),
         }}
       />
