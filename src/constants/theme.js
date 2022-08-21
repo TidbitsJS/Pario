@@ -7,3 +7,11 @@ export const COLORS = {
 
   white: "#FFF",
 };
+
+export const FONTS = {
+  black: "Roboto-Black",
+  bold: "Roboto-Bold",
+  medium: "Roboto-Medium",
+  regular: "Roboto-Regular",
+  light: "Roboto-light",
+};

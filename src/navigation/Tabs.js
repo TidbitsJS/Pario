@@ -39,6 +39,7 @@ const Tabs = () => {
         headerShown: false,
         tabBarStyle: {
           backgroundColor: COLORS.white,
+          elevation: 0,
         },
       })}
     >
