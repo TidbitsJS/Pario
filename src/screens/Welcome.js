@@ -15,7 +15,7 @@ import { COLORS, FONTS, icons, images } from "../constants";
 
 const { height } = Dimensions.get("window");
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   const [windowHeight, setWindowHeight] = useState(height);
 
   useEffect(() => {
@@ -66,16 +66,25 @@ const Welcome = () => {
 
           <View
             style={{
-              marginTop: 25,
+              marginTop: 50,
               width: "100%",
               flexDirection: "row",
               justifyContent: "space-evenly",
             }}
           >
-            <ServiceCard icon={icons.newPlan} name="Create New Trip Plans" />
+            <ServiceCard
+              icon={icons.newPlan}
+              name="Create New Trip Plans"
+              boxWidth={100}
+              boxHeight={99}
+              handlePress={() => navigation.navigate("Home")}
+            />
             <ServiceCard
               icon={icons.previousPlan}
-              name="Continue a previous plan "
+              name="Continue a previous plan"
+              boxWidth={100}
+              boxHeight={99}
+              handlePress={() => navigation.navigate("Home")}
             />
           </View>
         </View>

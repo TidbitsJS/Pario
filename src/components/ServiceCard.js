@@ -3,22 +3,30 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 
 import { COLORS, FONTS } from "../constants";
 
-const ServiceCard = ({ icon, name }) => {
+const ServiceCard = ({
+  icon,
+  name,
+  boxWidth,
+  boxHeight,
+  restStyles,
+  handlePress,
+}) => {
   return (
     <TouchableOpacity
       style={{
         flex: 1,
-        minWidth: 78,
-        maxWidth: 78,
+        minWidth: boxWidth,
+        maxWidth: boxWidth,
         alignItems: "center",
         marginRight: 10,
-        marginBottom: 40,
+        ...restStyles,
       }}
+      onPress={handlePress}
     >
       <View
         style={{
           width: "100%",
-          height: 79,
+          height: boxHeight,
           borderRadius: 5,
           backgroundColor: COLORS.primary,
           justifyContent: "center",

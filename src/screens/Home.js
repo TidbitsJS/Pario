@@ -8,6 +8,7 @@ import {
   StatusBar,
   ScrollView,
 } from "react-native";
+
 import { ServiceCard } from "../components";
 import { COLORS, FONTS, icons, images, services } from "../constants";
 
@@ -75,6 +76,12 @@ const Home = () => {
                 key={`service-${index}`}
                 icon={service.icon}
                 name={service.name}
+                boxWidth={78}
+                boxHeight={79}
+                restStyles={{
+                  marginBottom: 40,
+                }}
+                handlePress={() => {}}
               />
             ))}
           </View>
