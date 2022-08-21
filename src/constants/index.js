@@ -120,4 +120,40 @@ const notifications = [
   },
 ];
 
-export { images, icons, COLORS, FONTS, services, savedPlans, notifications };
+const settings = [
+  {
+    id: `setting-1`,
+    icon: icons.user,
+    title: "Profile",
+    subtitle: "Manage Changes to your account",
+  },
+  {
+    id: `setting-2`,
+    icon: icons.cards,
+    title: "Cards",
+    subtitle: "Secure your cards for safety",
+  },
+  {
+    id: `setting-3`,
+    icon: icons.settings,
+    title: "Preferences",
+    subtitle: "Customize your app",
+  },
+  {
+    id: `setting-4`,
+    icon: icons.logout,
+    title: "Logout",
+    subtitle: "Logout for your account",
+  },
+];
+
+export {
+  images,
+  icons,
+  COLORS,
+  FONTS,
+  services,
+  savedPlans,
+  notifications,
+  settings,
+};

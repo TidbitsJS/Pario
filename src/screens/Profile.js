@@ -8,8 +8,9 @@ import {
   Image,
   StatusBar,
 } from "react-native";
+import { SettingCard } from "../components";
 
-import { COLORS, FONTS, icons, images } from "../constants";
+import { COLORS, FONTS, icons, images, settings } from "../constants";
 
 const Profile = ({ navigation }) => {
   return (
@@ -84,6 +85,12 @@ const Profile = ({ navigation }) => {
                 style={{ width: 19, height: 18 }}
               />
             </TouchableOpacity>
+          </View>
+
+          <View style={{ marginTop: 50 }}>
+            {settings.map((setting) => (
+              <SettingCard key={setting.id} {...setting} />
+            ))}
           </View>
         </View>
       </ScrollView>
