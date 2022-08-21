@@ -4,7 +4,6 @@ import {
   Text,
   ScrollView,
   SafeAreaView,
-  TouchableOpacity,
   Image,
   StatusBar,
   Dimensions,
@@ -77,14 +76,14 @@ const Welcome = ({ navigation }) => {
               name="Create New Trip Plans"
               boxWidth={100}
               boxHeight={99}
-              handlePress={() => navigation.navigate("Home")}
+              handlePress={() => navigation.navigate("Main")}
             />
             <ServiceCard
               icon={icons.previousPlan}
               name="Continue a previous plan"
               boxWidth={100}
               boxHeight={99}
-              handlePress={() => navigation.navigate("Home")}
+              handlePress={() => navigation.navigate("Main")}
             />
           </View>
         </View>

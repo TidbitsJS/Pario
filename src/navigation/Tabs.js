@@ -1,9 +1,9 @@
 import React from "react";
 import { Image, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { COLORS, icons } from "../constants";
 
-import { Home, SavedPlans } from "../screens";
+import { COLORS, icons } from "../constants";
+import { Home, Notification, SavedPlans } from "../screens";
 
 const CustomTabIcon = ({ focused, icon }) => (
   <View style={{ alignItems: "center" }}>
@@ -65,7 +65,7 @@ const Tabs = () => {
 
       <Tab.Screen
         name="Notification"
-        component={Home}
+        component={Notification}
         options={{
           tabBarIcon: ({ focused }) => (
             <CustomTabIcon focused={focused} icon={icons.notification} />
