@@ -6,9 +6,11 @@ import {
   StatusBar,
   Image,
   TouchableOpacity,
+  FlatList,
 } from "react-native";
+import { SavedPlanCard } from "../components";
 
-import { COLORS, FONTS, icons, images } from "../constants";
+import { COLORS, FONTS, icons, images, savedPlans } from "../constants";
 
 const SavedPlans = () => {
   return (
@@ -26,7 +28,13 @@ const SavedPlans = () => {
           Saved Trip Plans
         </Text>
 
-        <View style={{ marginTop: 50 }}></View>
+        <View style={{ marginTop: 50 }}>
+          <FlatList
+            data={savedPlans}
+            renderItem={({ item, index }) => <SavedPlanCard card={item} />}
+            keyExtractor={(item) => `saved-card-${item.name}`}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );

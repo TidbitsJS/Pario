@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 
-import { COLORS, FONTS } from "../constants";
+import { COLORS, FONTS, icons } from "../constants";
 
 const ListItem = ({ title }) => (
-  <View style={{ flexDirection: "row", alignItems: "center" }}>
+  <View style={{ flexDirection: "row", alignItems: "center", marginBottom: 5 }}>
     <View
       style={{
         width: 5,
@@ -27,6 +27,8 @@ const ListItem = ({ title }) => (
 );
 
 const SavedPlanCard = ({ card }) => {
+  const [liked, setLiked] = useState(false);
+
   return (
     <TouchableOpacity
       style={{
@@ -35,6 +37,7 @@ const SavedPlanCard = ({ card }) => {
         borderRadius: 5,
         padding: 20,
         flexDirection: "row",
+        marginBottom: 25,
       }}
     >
       <Image
@@ -60,17 +63,17 @@ const SavedPlanCard = ({ card }) => {
             {card.name}
           </Text>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => setLiked(!liked)}>
             <Image
-              source={icons.heartOutline}
+              source={liked ? icons.heartFill : icons.heartOutline}
               resizeMode="contain"
-              style={{ width: 24, height: 20 }}
+              style={{ width: 24, height: 20, borderRadius: 5 }}
             />
           </TouchableOpacity>
         </View>
 
         <View style={{ marginVertical: 15 }}>
-          {card.content.map((item, index) => (
+          {card.features.map((item, index) => (
             <ListItem key={`${card.name}-${index}`} title={item} />
           ))}
         </View>
@@ -85,7 +88,7 @@ const SavedPlanCard = ({ card }) => {
           >
             {card.isCompleted
               ? "Done"
-              : `${card.completedPercentage} completed`}
+              : `${card.completedPercentage}% completed`}
           </Text>
         </View>
       </View>

@@ -41,4 +41,37 @@ const services = [
   },
 ];
 
-export { images, icons, COLORS, FONTS, services };
+const savedPlans = [
+  {
+    name: "Australia",
+    img: images.australia,
+    features: [
+      "Royal Air Maroc",
+      "Brunswick Hotel",
+      "2 mini tours",
+      "Two items Packed",
+    ],
+    isCompleted: false,
+    completedPercentage: 10,
+  },
+  {
+    name: "Paris",
+    img: images.paris,
+    features: ["Emirate", "Air BnB", "2 mini tours", "15 items Packed"],
+    isCompleted: false,
+    completedPercentage: 90,
+  },
+  {
+    name: "Seychelles",
+    img: images.seychelles,
+    features: [
+      "Qatar Airways",
+      "Bayview Seychelles",
+      "Sun bathing & Scuna...",
+      "All items Packed",
+    ],
+    isCompleted: true,
+  },
+];
+
+export { images, icons, COLORS, FONTS, services, savedPlans };
