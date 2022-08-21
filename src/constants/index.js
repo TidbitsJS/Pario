@@ -74,4 +74,50 @@ const savedPlans = [
   },
 ];
 
-export { images, icons, COLORS, FONTS, services, savedPlans };
+const notifications = [
+  {
+    id: "notification-1",
+    title: "Flight",
+    icon: icons.flights,
+    cardColor: COLORS.primary,
+    message: [
+      "The flight to Morocco is cheaper now.",
+      "Check Emirates and Air Maroc",
+    ],
+    btnTitle: "Book Now",
+  },
+  {
+    id: "notification-2",
+    title: "Pack Help",
+    icon: icons.packHelp,
+    cardColor: COLORS.lightPrimary,
+    message: [
+      "Well done!",
+      "You have packed 15 items for you Seychelles Trip, You have 10 more itmems to pack.",
+    ],
+    btnTitle: "Pack Now",
+  },
+  {
+    id: "notification-3",
+    title: "Weather",
+    icon: icons.weather,
+    cardColor: COLORS.primary,
+    message: [
+      "Have you checked the weather in seychelles for your planned trip?",
+    ],
+    btnTitle: "Check Now",
+  },
+  {
+    id: "notification-4",
+    title: "Short Stay",
+    icon: icons.shortStay,
+    cardColor: COLORS.lightPrimary,
+    message: [
+      "Well done!",
+      "You have packed 15 items for you Seychelles Trip, You have 10 more itmems to pack.",
+    ],
+    btnTitle: "Pack Now",
+  },
+];
+
+export { images, icons, COLORS, FONTS, services, savedPlans, notifications };
