@@ -7,9 +7,10 @@ import {
   Image,
   StatusBar,
   Dimensions,
+  ImageBackground,
 } from "react-native";
-import { ServiceCard } from "../components";
 
+import { ServiceCard } from "../components";
 import { COLORS, FONTS, icons, images } from "../constants";
 
 const { height } = Dimensions.get("window");
@@ -27,6 +28,18 @@ const Welcome = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
       <StatusBar backgroundColor={COLORS.white} barStyle="dark-content" />
+
+      {/* Welcome Background */}
+      <View
+        style={{ position: "absolute", top: 0, right: 0, left: 0, bottom: 0 }}
+      >
+        <ImageBackground
+          source={images.welcomebg}
+          resizeMode="cover"
+          style={{ width: "100%", height: "100%" }}
+        />
+      </View>
+
       <ScrollView>
         <View
           style={{
