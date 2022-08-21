@@ -1,3 +1,4 @@
 import Home from "./Home";
+import SavedPlans from "./SavedPlans";
 
-export { Home };
+export { Home, SavedPlans };

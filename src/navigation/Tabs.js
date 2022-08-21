@@ -3,7 +3,7 @@ import { Image, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { COLORS, icons } from "../constants";
 
-import { Home } from "../screens";
+import { Home, SavedPlans } from "../screens";
 
 const CustomTabIcon = ({ focused, icon }) => (
   <View style={{ alignItems: "center" }}>
@@ -55,7 +55,7 @@ const Tabs = () => {
 
       <Tab.Screen
         name="Saved"
-        component={Home}
+        component={SavedPlans}
         options={{
           tabBarIcon: ({ focused }) => (
             <CustomTabIcon focused={focused} icon={icons.bookmark} />

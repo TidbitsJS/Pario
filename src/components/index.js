@@ -1,3 +1,4 @@
 import ServiceCard from "./ServiceCard";
+import SavedPlanCard from "./SavedPlanCard";
 
-export { ServiceCard };
+export { ServiceCard, SavedPlanCard };
