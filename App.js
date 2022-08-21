@@ -2,6 +2,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 
+import { Welcome } from "./src/screens";
 import Tabs from "./src/navigation/Tabs";
 
 const theme = {
@@ -31,8 +32,9 @@ function App() {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="Home"
+        initialRouteName="Welcome"
       >
+        <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="Home" component={Tabs} />
       </Stack.Navigator>
     </NavigationContainer>

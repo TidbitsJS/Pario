@@ -20,6 +20,8 @@ import packHelp from "../assets/icons/packHelp.png";
 import resturants from "../assets/icons/resturants.png";
 import shortStay from "../assets/icons/shortStay.png";
 import weather from "../assets/icons/weather.png";
+import newPlan from "../assets/icons/newPlan.png";
+import previousPlan from "../assets/icons/previousPlan.png";
 
 export default {
   bookmark,
@@ -44,4 +46,6 @@ export default {
   resturants,
   shortStay,
   weather,
+  newPlan,
+  previousPlan,
 };

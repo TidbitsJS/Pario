@@ -37,6 +37,7 @@ const ServiceCard = ({ icon, name }) => {
           color: COLORS.tertiary,
           fontSize: 14,
           marginTop: 10,
+          textAlign: "center",
         }}
       >
         {name}
