@@ -66,6 +66,10 @@ const Home = () => {
               justifyContent: "space-between",
             }}
           >
+            {/**
+             *  Using map instead of Flatlist to avoid a clash between the scrollView and Flatlist nested orientation
+             *  It's a fix data, so a map justifies more than Flatlist which is primarily used to handle a long list of data
+             */}
             {services.map((service, index) => (
               <ServiceCard
                 key={`service-${index}`}
@@ -74,6 +78,34 @@ const Home = () => {
               />
             ))}
           </View>
+
+          <TouchableOpacity
+            style={{
+              width: "100%",
+              minHeight: 78,
+              justifyContent: "space-between",
+              alignItems: "center",
+              backgroundColor: COLORS.primary,
+              flexDirection: "row",
+              borderRadius: 5,
+              paddingHorizontal: 30,
+            }}
+          >
+            <Text
+              style={{
+                fontFamily: FONTS.regular,
+                color: COLORS.white,
+                fontSize: 14,
+              }}
+            >
+              Expenses Planner
+            </Text>
+            <Image
+              source={icons.expenses}
+              resizeMode="contain"
+              style={{ width: 47, height: 44 }}
+            />
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>

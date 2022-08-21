@@ -36,7 +36,7 @@ const ServiceCard = ({ icon, name }) => {
           fontFamily: FONTS.regular,
           color: COLORS.tertiary,
           fontSize: 14,
-          marginTop: 5,
+          marginTop: 10,
         }}
       >
         {name}
