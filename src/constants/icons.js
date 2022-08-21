@@ -10,6 +10,16 @@ import nextArrow from "../assets/icons/nextArrow.png";
 import notification from "../assets/icons/notification.png";
 import settings from "../assets/icons/settings.png";
 import user from "../assets/icons/user.png";
+import drinks from "../assets/icons/drinks.png";
+import expenses from "../assets/icons/expenses.png";
+import flights from "../assets/icons/flights.png";
+import itinerary from "../assets/icons/itinerary.png";
+import leisure from "../assets/icons/leisure.png";
+import map from "../assets/icons/map.png";
+import packHelp from "../assets/icons/packHelp.png";
+import resturants from "../assets/icons/resturants.png";
+import shortStay from "../assets/icons/shortStay.png";
+import weather from "../assets/icons/weather.png";
 
 export default {
   bookmark,
@@ -24,4 +34,14 @@ export default {
   notification,
   settings,
   user,
+  drinks,
+  expenses,
+  flights,
+  itinerary,
+  leisure,
+  map,
+  packHelp,
+  resturants,
+  shortStay,
+  weather,
 };

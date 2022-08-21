@@ -8,7 +8,8 @@ import {
   StatusBar,
   ScrollView,
 } from "react-native";
-import { COLORS, FONTS, images } from "../constants";
+import { ServiceCard } from "../components";
+import { COLORS, FONTS, icons, images, services } from "../constants";
 
 const Home = () => {
   return (
@@ -55,6 +56,23 @@ const Home = () => {
                 style={{ width: "100%", height: "100%", borderRadius: 21 }}
               />
             </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              marginTop: 50,
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+            }}
+          >
+            {services.map((service, index) => (
+              <ServiceCard
+                key={`service-${index}`}
+                icon={service.icon}
+                name={service.name}
+              />
+            ))}
           </View>
         </View>
       </ScrollView>
