@@ -12,7 +12,7 @@ import {
 import { ServiceCard } from "../components";
 import { COLORS, FONTS, icons, images, services } from "../constants";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
       <StatusBar backgroundColor={COLORS.white} barStyle="dark-content" />
@@ -50,6 +50,7 @@ const Home = () => {
 
             <TouchableOpacity
               style={{ width: 42, height: 42, borderRadius: 21 }}
+              onPress={() => navigation.navigate("Profile")}
             >
               <Image
                 source={images.userProfile}

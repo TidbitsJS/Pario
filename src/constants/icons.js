@@ -22,6 +22,7 @@ import shortStay from "../assets/icons/shortStay.png";
 import weather from "../assets/icons/weather.png";
 import newPlan from "../assets/icons/newPlan.png";
 import previousPlan from "../assets/icons/previousPlan.png";
+import backArrow from "../assets/icons/backArrow.png";
 
 export default {
   bookmark,
@@ -48,4 +49,5 @@ export default {
   weather,
   newPlan,
   previousPlan,
+  backArrow,
 };
